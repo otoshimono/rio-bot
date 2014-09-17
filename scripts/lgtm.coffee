@@ -7,8 +7,8 @@
 module.exports = (robot) ->
 
   robot.respond /lgtm$/i, (msg) ->
-    msg.http 'http://www.lgtm.in/g'
-      .header 'Accept', 'application/json'
+    msg.http('http://www.lgtm.in/g')
+      .header('Accept', 'application/json')
       .get() (err, res, body) ->
         if err
           msg.send 'failed to fetch image :('
